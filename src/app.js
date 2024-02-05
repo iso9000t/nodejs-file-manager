@@ -22,7 +22,6 @@ import { systemInfoSwitch } from './utils/systemInfo.js';
 import { compressDecompress } from './utils/compressor.js';
 import commandMap from './utils/commands.js';
 
-
 const consoleInterface = createInterface({
   input: process.stdin,
   output: process.stdout,
