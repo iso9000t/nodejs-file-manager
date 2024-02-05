@@ -1,7 +1,7 @@
 import { EOL, cpus, homedir, userInfo, arch } from 'node:os';
 import { showInvalidInput } from './alertMessages.js';
 
-export const systemInfoSwitch = (option) => {
+ export const systemInfoSwitch = (option) => {
   const optionsMap = {
     '--EOL': () => console.log(JSON.stringify(EOL)),
     '--cpus': () => {
