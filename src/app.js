@@ -20,6 +20,8 @@ import {
 import { checkExistence } from './utils/validators.js';
 import { systemInfoSwitch } from './utils/systemInfo.js';
 import { compressDecompress } from './utils/compressor.js';
+import commandMap from './utils/commands.js';
+
 
 const consoleInterface = createInterface({
   input: process.stdin,
@@ -185,22 +187,6 @@ export class FileManagerApp {
         this['.exit']();
         return;
       }
-
-      const commandMap = {
-        up: 'goUp',
-        ls: 'list',
-        cat: 'viewFile',
-        add: 'createFile',
-        rn: 'renameFile',
-        cp: 'copyFile',
-        rm: 'deleteFile',
-        mv: 'moveFile',
-        os: 'osInfo',
-        hash: 'calculateHash',
-        compress: 'compressFile',
-        decompress: 'decompressFile',
-        cd: 'changeDir',
-      };
 
       const methodName = commandMap[command];
 
